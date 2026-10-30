@@ -1,0 +1,28 @@
+{
+  "name": "leetcode-theme-studio",
+  "version": "1.0.0",
+  "description": "Transform LeetCode into your personal coding sanctuary with 6 hand-crafted themes",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open /popup.html",
+    "build": "vite build && node scripts/build-content.mjs && node scripts/generate-icons.cjs",
+    "build:popup": "vite build",
+    "build:content": "node scripts/build-content.mjs",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "chrome-extension",
+    "leetcode",
+    "themes",
+    "customization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "jimp": "^1.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^5.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+/* ════════════════════════════════════════════════════════════
+   VINTAGE PAPER THEME - Modular CSS
+   ════════════════════════════════════════════════════════════ */
+
+/* Typography - Exclude Monaco editor from body font */
+body, body *:not(.monaco-editor):not(.monaco-editor *) {
+  font-family: var(--ts-font) !important;
+}
+
+/* Monaco editor gets monospace font only */
+.monaco-editor, .monaco-editor * {
+  font-family: var(--ts-font-mono) !important;
+}
+
+code, pre, kbd {
+  font-family: var(--ts-font-mono) !important;
+}
+
+/* Theme-specific background (when no wallpaper) */
+html.lts-no-wallpaper,
+html.lts-no-wallpaper body,
+html.lts-no-wallpaper #__next,
+html.lts-no-wallpaper #root,
+html.lts-no-wallpaper main {
+  background: radial-gradient(ellipse at 50% 50%, #221810 0%, #18110b 60%, #120b06 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  transition: background 0.3s ease !important;
+}
+
+html.lts-no-wallpaper {
+  color-scheme: dark !important;
+}

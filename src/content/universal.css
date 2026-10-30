@@ -1,0 +1,395 @@
+/* ════════════════════════════════════════════════════════════
+   LEETCODE THEME STUDIO — UNIVERSAL CSS
+   Common selectors, layout patterns, and UI components
+   Applied across all themes
+   Phase 3: Simplified selectors (removed wildcards for performance)
+   ════════════════════════════════════════════════════════════ */
+
+/* ════════════════════════════════════════════════════════════
+   UNIVERSAL TEXT VISIBILITY (Profile, Contest, Discuss, Problem)
+   ════════════════════════════════════════════════════════════ */
+
+/* Primary text colors */
+.text-label-1,
+.dark\:text-dark-label-1,
+.text-dark-label-1,
+.text-lc-text-primary,
+.dark\:text-dark-lc-text-primary,
+.dark\:text-lc-text-primary,
+.text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600,
+.text-slate-900, .text-slate-800, .text-slate-700, .text-slate-600,
+.text-zinc-900, .text-zinc-800, .text-zinc-700, .text-zinc-600,
+.text-neutral-900, .text-neutral-800, .text-neutral-700, .text-neutral-600,
+.text-black,
+.dark\:text-white {
+  color: var(--ts-text-primary) !important;
+}
+
+/* Secondary text colors */
+.text-label-2,
+.dark\:text-dark-label-2,
+.text-dark-label-2,
+.text-lc-text-secondary,
+.dark\:text-dark-lc-text-secondary,
+.dark\:text-lc-text-secondary,
+.text-gray-500,
+.text-slate-500,
+.text-zinc-500 {
+  color: var(--ts-text-secondary) !important;
+}
+
+/* Muted text colors */
+.text-label-3,
+.dark\:text-dark-label-3,
+.text-dark-label-3,
+.text-label-4,
+.dark\:text-dark-label-4,
+.text-dark-label-4,
+.text-lc-text-tertiary,
+.dark\:text-dark-lc-text-tertiary,
+.text-gray-400,
+.text-slate-400,
+.text-zinc-400 {
+  color: var(--ts-text-muted) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   UNIVERSAL LEETCODE TAILWIND LAYER & LAYOUT OVERRIDES
+   ════════════════════════════════════════════════════════════ */
+
+/* Transparent containers (page-level backgrounds) */
+.bg-layer-01, .bg-layer-1,
+.dark\:bg-layer-01, .dark\:bg-layer-1,
+.dark\:bg-dark-layer-01, .dark\:bg-dark-layer-1,
+.bg-lc-layer-01, .dark\:bg-lc-layer-01,
+.bg-layer-bg, .dark\:bg-dark-layer-bg, .bg-dark-layer-bg,
+.bg-sd-background-gray, .dark\:bg-sd-background-gray,
+div#__next > div, div#root > div, main > div {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Content boxes with borders and shadows */
+.bg-layer-02, .bg-layer-2,
+.dark\:bg-layer-02, .dark\:bg-layer-2,
+.dark\:bg-dark-layer-02, .dark\:bg-dark-layer-2,
+.bg-lc-layer-02, .dark\:bg-lc-layer-02,
+.bg-overlay-01, .bg-overlay-1,
+.dark\:bg-overlay-01, .dark\:bg-overlay-1,
+.dark\:bg-dark-overlay-01, .dark\:bg-dark-overlay-1,
+.bg-overlay-02, .bg-overlay-2,
+.dark\:bg-overlay-02, .dark\:bg-overlay-2,
+.dark\:bg-dark-overlay-02, .dark\:bg-dark-overlay-2 {
+  background-color: rgba(10, 8, 20, 0.3) !important;
+  background: rgba(10, 8, 20, 0.3) !important;
+  border: 2px solid rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 
+              0 4px 16px rgba(0, 0, 0, 0.5),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+}
+
+/* Problem description container */
+div[data-track-load="description_content"] {
+  background-color: rgba(10, 8, 20, 0.3) !important;
+  background: rgba(10, 8, 20, 0.3) !important;
+  border: 2px solid rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 
+              0 4px 16px rgba(0, 0, 0, 0.5),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Monaco editor - transparent with border */
+.monaco-editor, .monaco-editor-background {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Tertiary content */
+.bg-layer-03, .bg-layer-3,
+.dark\:bg-layer-03, .dark\:bg-layer-3,
+.dark\:bg-dark-layer-03, .dark\:bg-dark-layer-3,
+.bg-lc-layer-03, .dark\:bg-lc-layer-03,
+.bg-fill-1, .dark\:bg-dark-fill-1, .bg-dark-fill-1,
+.bg-fill-2, .dark\:bg-dark-fill-2, .bg-dark-fill-2,
+.bg-fill-3, .dark\:bg-dark-fill-3, .bg-dark-fill-3,
+.bg-fill-quaternary, .dark\:bg-dark-fill-quaternary, .bg-dark-fill-quaternary {
+  background-color: rgba(10, 8, 20, 0.3) !important;
+  background: rgba(10, 8, 20, 0.3) !important;
+  border: 2px solid rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 
+              0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 8px !important;
+}
+
+/* Border colors */
+.border-border-tertiary, .border-border-secondary, .border-border-primary,
+.border-border-quaternary,
+.dark\:border-border-tertiary, .dark\:border-border-secondary, .dark\:border-border-primary,
+.dark\:border-border-quaternary,
+.dark\:border-dark-border-tertiary, .dark\:border-dark-border-secondary, .dark\:border-dark-border-primary {
+  border-color: var(--ts-border) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   HORIZONTAL SCROLL GRADIENTS & FADE MASKS
+   ════════════════════════════════════════════════════════════ */
+.bg-gradient-to-l,
+.dark\:bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--ts-bg-primary) 0%, transparent 100%) !important;
+}
+.bg-gradient-to-r,
+.dark\:bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--ts-bg-primary) 0%, transparent 100%) !important;
+}
+.bg-gradient-to-t,
+.dark\:bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--ts-bg-primary) 0%, transparent 100%) !important;
+}
+.bg-gradient-to-b,
+.dark\:bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--ts-bg-primary) 0%, transparent 100%) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   PROBLEMSET LEFT SIDEBAR NAVIGATION
+   ════════════════════════════════════════════════════════════ */
+aside,
+nav.sidebar,
+div.sidebar {
+  background-color: rgba(10, 8, 20, 0.3) !important;
+  background: rgba(10, 8, 20, 0.3) !important;
+  border-right: 1px solid var(--ts-border) !important;
+}
+
+aside a,
+nav.sidebar a {
+  color: var(--ts-text-primary) !important;
+  transition: all 0.2s ease !important;
+  border-radius: var(--ts-radius) !important;
+}
+
+aside a:hover,
+nav.sidebar a:hover {
+  background-color: var(--ts-bg-hover) !important;
+  color: var(--ts-accent) !important;
+}
+
+aside a.active,
+aside a[aria-current="page"] {
+  background-color: var(--ts-bg-hover) !important;
+  color: var(--ts-accent) !important;
+  font-weight: 600 !important;
+}
+
+aside svg,
+nav.sidebar svg {
+  color: var(--ts-accent) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   SEARCH & FORM CONTROLS
+   ════════════════════════════════════════════════════════════ */
+input[placeholder*="Search"],
+input[placeholder*="search"],
+input[type="text"],
+input[type="search"],
+select {
+  background-color: rgba(10, 8, 20, 0.3) !important;
+  color: var(--ts-text-primary) !important;
+  border: 1px solid var(--ts-border) !important;
+  border-radius: var(--ts-radius) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ts-text-muted) !important;
+  opacity: 1 !important;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--ts-accent) !important;
+  box-shadow: 0 0 0 2px var(--ts-accent-glow) !important;
+  outline: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   TABLES & QUESTION LISTS
+   ════════════════════════════════════════════════════════════ */
+div[role="table"],
+div[role="rowgroup"],
+table {
+  background-color: transparent !important;
+  color: var(--ts-text-primary) !important;
+}
+
+div[role="row"],
+table tr {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--ts-border) !important;
+  transition: background-color 0.15s ease !important;
+}
+
+div[role="row"]:hover,
+table tr:hover {
+  background-color: var(--ts-bg-hover) !important;
+}
+
+div[role="columnheader"],
+table th {
+  color: var(--ts-text-secondary) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--ts-border) !important;
+}
+
+div[role="cell"],
+table td {
+  color: var(--ts-text-primary) !important;
+}
+
+div[role="cell"] a,
+table td a {
+  color: var(--ts-text-primary) !important;
+}
+
+div[role="cell"] a:hover,
+table td a:hover {
+  color: var(--ts-accent) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   FLEXLAYOUT ENGINE (Panels, Tabs, Tabsets, Splitters)
+   ════════════════════════════════════════════════════════════ */
+.flexlayout__layout,
+.flexlayout__tabset,
+.flexlayout__tabset_content,
+.flexlayout__tab {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: var(--ts-text-primary) !important;
+}
+
+.flexlayout__tabset_tabbar_outer,
+.flexlayout__tabset_tabbar_inner {
+  background-color: transparent !important;
+  background: transparent !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.flexlayout__tab_button {
+  color: var(--ts-text-secondary) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.flexlayout__tab_button--selected,
+.flexlayout__tab_button[class*="selected"] {
+  color: var(--ts-accent) !important;
+  border-bottom: 2px solid var(--ts-accent) !important;
+}
+
+.flexlayout__tab_button--selected .flexlayout__tab_button_content,
+.flexlayout__tab_button--selected * {
+  color: var(--ts-accent) !important;
+}
+
+.flexlayout__tab_button--unselected:hover {
+  color: var(--ts-text-primary) !important;
+}
+
+.flexlayout__tab_toolbar button,
+.flexlayout__tab_toolbar_button {
+  color: var(--ts-text-secondary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.flexlayout__tab_toolbar button:hover,
+.flexlayout__tab_toolbar_button:hover {
+  color: var(--ts-accent) !important;
+}
+
+.flexlayout__splitter {
+  background: var(--ts-border) !important;
+  transition: background 0.2s ease !important;
+}
+
+.flexlayout__splitter:hover {
+  background: var(--ts-accent) !important;
+  box-shadow: 0 0 10px var(--ts-accent-glow) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   TOP NAVBAR (Header Bar)
+   ════════════════════════════════════════════════════════════ */
+#navbar-root,
+#navbar,
+nav,
+header {
+  background-color: transparent !important;
+  background: transparent !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#navbar img,
+#navbar-root img,
+nav img,
+header img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  max-height: 28px !important;
+}
+
+/* Buttons in navbar */
+button[data-e2e-tracking="run-code"],
+button[data-track-load="run_code"] {
+  background: var(--ts-bg-tertiary) !important;
+  color: var(--ts-accent) !important;
+  border: 1px solid var(--ts-border-accent) !important;
+  border-radius: var(--ts-radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+button[data-e2e-tracking="run-code"]:hover,
+button[data-track-load="run_code"]:hover {
+  background: var(--ts-bg-hover) !important;
+  box-shadow: 0 0 10px var(--ts-accent-glow) !important;
+}
+
+button[data-cy="submit-code-btn"] {
+  background: var(--ts-accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--ts-accent) !important;
+  border-radius: var(--ts-radius) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 14px var(--ts-accent-glow) !important;
+  transition: all 0.2s ease !important;
+}
+
+button[data-cy="submit-code-btn"] svg,
+button[data-cy="submit-code-btn"] span {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   CODE EDITOR CONTAINER
+   ════════════════════════════════════════════════════════════ */
+#editor,
+div[id="editor"] {
+  background-color: rgba(10, 8, 20, 0.3) !important;
+  background: rgba(10, 8, 20, 0.3) !important;
+  border: 2px solid rgba(0, 0, 0, 0.4) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 
+              0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}

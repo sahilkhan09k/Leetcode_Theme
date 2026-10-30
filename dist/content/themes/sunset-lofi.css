@@ -1,0 +1,35 @@
+/* ════════════════════════════════════════════════════════════
+   SUNSET LOFI THEME - Modular CSS
+   ════════════════════════════════════════════════════════════ */
+
+/* Typography - Exclude Monaco editor from body font */
+body, body *:not(.monaco-editor):not(.monaco-editor *) {
+  font-family: var(--ts-font) !important;
+}
+
+/* Monaco editor gets monospace font only */
+.monaco-editor, .monaco-editor * {
+  font-family: var(--ts-font-mono) !important;
+}
+
+code, pre, kbd {
+  font-family: var(--ts-font-mono) !important;
+}
+
+/* Theme-specific background (when no wallpaper) */
+html.lts-no-wallpaper,
+html.lts-no-wallpaper body,
+html.lts-no-wallpaper #__next,
+html.lts-no-wallpaper #root,
+html.lts-no-wallpaper main {
+  background: radial-gradient(circle at 50% 55%, rgba(255,140,0,0.35) 0%, transparent 28%),
+              radial-gradient(ellipse at 50% 55%, rgba(255,100,50,0.25) 0%, rgba(200,50,100,0.15) 30%, transparent 55%),
+              linear-gradient(180deg, #120528 0%, #1c0d38 25%, #2a114c 50%, #461658 75%, #1c0d38 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  transition: background 0.3s ease !important;
+}
+
+html.lts-no-wallpaper {
+  color-scheme: dark !important;
+}

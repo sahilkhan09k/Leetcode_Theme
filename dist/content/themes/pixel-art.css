@@ -1,0 +1,41 @@
+/* ════════════════════════════════════════════════════════════
+   PIXEL ART THEME - Modular CSS
+   ════════════════════════════════════════════════════════════ */
+
+/* Typography - Exclude Monaco editor from wildcard */
+h1, h2, h3, h4, [data-cy="question-title"], [class*="title__"] {
+  font-family: 'VT323', monospace !important;
+  font-size: 1.6em !important;
+  letter-spacing: 0.5px !important;
+}
+
+body, p, li, span, td, th {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+/* Monaco editor gets monospace font only */
+.monaco-editor, .monaco-editor * {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+code, pre {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+/* Theme-specific background (when no wallpaper) */
+html.lts-no-wallpaper,
+html.lts-no-wallpaper body,
+html.lts-no-wallpaper #__next,
+html.lts-no-wallpaper #root,
+html.lts-no-wallpaper main {
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,255,65,0.03) 3px, rgba(0,255,65,0.03) 4px),
+              radial-gradient(ellipse at 50% 40%, rgba(0,255,65,0.10) 0%, transparent 60%),
+              linear-gradient(180deg, #08081a 0%, #0c0c22 50%, #08081a 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  transition: background 0.3s ease !important;
+}
+
+html.lts-no-wallpaper {
+  color-scheme: dark !important;
+}

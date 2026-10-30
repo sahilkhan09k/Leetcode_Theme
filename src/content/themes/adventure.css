@@ -1,0 +1,41 @@
+/* ════════════════════════════════════════════════════════════
+   ADVENTURE THEME - Modular CSS
+   ════════════════════════════════════════════════════════════ */
+
+/* Typography - Exclude Monaco editor from body font */
+h1, h2, h3, h4, [data-cy="question-title"], [class*="title__"] {
+  font-family: 'Cinzel', serif !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 700 !important;
+}
+
+body, body *:not(.monaco-editor):not(.monaco-editor *) {
+  font-family: var(--ts-font) !important;
+}
+
+/* Monaco editor gets monospace font only */
+.monaco-editor, .monaco-editor * {
+  font-family: var(--ts-font-mono) !important;
+}
+
+code, pre, kbd {
+  font-family: var(--ts-font-mono) !important;
+}
+
+/* Theme-specific background (when no wallpaper) */
+html.lts-no-wallpaper,
+html.lts-no-wallpaper body,
+html.lts-no-wallpaper #__next,
+html.lts-no-wallpaper #root,
+html.lts-no-wallpaper main {
+  background: radial-gradient(ellipse at 50% -10%, rgba(212,160,23,0.22) 0%, rgba(160,100,0,0.12) 40%, transparent 65%),
+              radial-gradient(ellipse at 0% 100%, rgba(80,50,0,0.25) 0%, transparent 50%),
+              linear-gradient(160deg, #120e06 0%, #181308 35%, #221b0b 70%, #151006 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  transition: background 0.3s ease !important;
+}
+
+html.lts-no-wallpaper {
+  color-scheme: dark !important;
+}

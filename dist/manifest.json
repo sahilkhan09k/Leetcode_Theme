@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Theme Studio",
+  "short_name": "Theme Studio",
+  "version": "1.0.0",
+  "description": "Transform LeetCode into your personal coding sanctuary. Choose from 6 hand-crafted themes — Anime Night (Sakura), Dark Pro, Pixel Art, Vintage Paper, Adventure, and Sunset Lofi.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "LeetCode Theme Studio"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content/index.js"],
+      "css": ["content/base.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content/monaco-bridge.js"],
+      "run_at": "document_idle",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "themes/*",
+        "fonts/*",
+        "icons/*",
+        "images/*",
+        "images/anime/*/*",
+        "images/anime/one-piece/*",
+        "content/monaco-bridge.js",
+        "content/themes/*.css",
+        "content/universal.css",
+        "content/base.css"
+      ],
+      "matches": ["https://leetcode.com/*"]
+    }
+  ]
+}

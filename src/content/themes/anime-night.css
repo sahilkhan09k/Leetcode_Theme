@@ -1,0 +1,37 @@
+/* ════════════════════════════════════════════════════════════
+   ANIME NIGHT THEME - Modular CSS
+   ════════════════════════════════════════════════════════════ */
+
+/* Typography - Exclude Monaco editor from body font */
+body, body *:not(.monaco-editor):not(.monaco-editor *) {
+  font-family: var(--ts-font) !important;
+}
+
+/* Monaco editor gets monospace font only */
+.monaco-editor, .monaco-editor * {
+  font-family: var(--ts-font-mono) !important;
+}
+
+code, pre, kbd {
+  font-family: var(--ts-font-mono) !important;
+}
+
+/* Theme-specific background (when no wallpaper) */
+html.lts-no-wallpaper,
+html.lts-no-wallpaper body,
+html.lts-no-wallpaper #__next,
+html.lts-no-wallpaper #root,
+html.lts-no-wallpaper main {
+  background: radial-gradient(circle at 74% 15%, rgba(255,252,220,1) 0%, rgba(220,235,255,0.9) 2%, rgba(150,200,255,0.3) 6%, transparent 15%),
+              radial-gradient(circle at 74% 15%, rgba(100,160,255,0.18) 0%, transparent 28%),
+              radial-gradient(ellipse at 28% 22%, rgba(130,45,160,0.45) 0%, transparent 40%),
+              radial-gradient(ellipse at 50% 100%, rgba(35,15,65,0.85) 0%, rgba(20,10,40,0.5) 40%, transparent 65%),
+              linear-gradient(180deg, #0d091e 0%, #120c28 28%, #140e2c 55%, #191136 75%, #0f0a22 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  transition: background 0.3s ease !important;
+}
+
+html.lts-no-wallpaper {
+  color-scheme: dark !important;
+}
