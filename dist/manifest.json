@@ -36,7 +36,11 @@
       "all_frames": false
     },
     {
-      "matches": ["https://leetcode.com/problems/*"],
+      "matches": [
+        "https://leetcode.com/problems/*",
+        "https://leetcode.com/contest/*",
+        "https://leetcode.com/contest/*/*"
+      ],
       "js": ["content/monaco-bridge.js"],
       "run_at": "document_idle",
       "world": "MAIN",
